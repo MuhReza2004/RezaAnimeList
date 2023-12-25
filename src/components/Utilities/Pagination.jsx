@@ -27,12 +27,15 @@ const Pagination = ({ page, lastPage, setPage }) => {
       <p>
         {page} of {lastPage}
       </p>
-      <button
-        onClick={HandleNextPage}
-        className="transition-all hover:text-me-accent"
-      >
-        next
-      </button>
+
+      {page >= lastPage ? null : (
+        <button
+          onClick={HandleNextPage}
+          className="transition-all hover:text-me-accent"
+        >
+          next
+        </button>
+      )}
     </div>
   );
 };

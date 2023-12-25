@@ -7,7 +7,7 @@ const AnimeList = ({ api }) => {
       {api.data?.map((anime, index) => {
         return (
           <Link
-            href={`/${anime.mal_id}`}
+            href={`/anime/${anime.mal_id}`}
             className="cursor-pointer  text-me-primary hover:text-me-accent transition-all"
             key={index}
           >
